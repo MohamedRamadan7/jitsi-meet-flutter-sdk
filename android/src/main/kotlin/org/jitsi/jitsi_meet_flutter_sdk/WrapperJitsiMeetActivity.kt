@@ -35,6 +35,11 @@ class WrapperJitsiMeetActivity : JitsiMeetActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_SECURE,
+            WindowManager.LayoutParams.FLAG_SECURE
+        )
+        
         showOnLockscreen()
         super.onCreate(savedInstanceState)
         registerForBroadcastMessages()
